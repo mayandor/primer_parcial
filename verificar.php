@@ -8,11 +8,10 @@ $sql = "select * from usuario u, identificador i WHERE u.ci={$_POST['ci']} and i
 $resultado = mysqli_query($conn, $sql);
 if ($fila = mysqli_fetch_row($resultado)){
     $_SESSION['user'] = $_POST['ci'];
-    $_SESSION['clave'] = $_POST['clave'];    
-    echo 'exito';
+    $_SESSION['clave'] = $_POST['clave'];
+    $_SESSION['imagen_perfil'] =  $fila[2];    
+    header("location: dashboard.php");
 }else{
-    echo '';
     header("location: login.php?id='NO'");
-
 }
 ?>

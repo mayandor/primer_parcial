@@ -15,6 +15,8 @@
     <form method="POST" action="verificar.php">
         <input type="text" placeholder="ci" name="ci">
         <input type="password" placeholder="clave" name="clave">
+        <label for="head">Elegir color</label>
+        <input type="color" id="head" name="head" value="#e66465">
         <button type="submit">Ingresar</button>
     </form>
 <?php
@@ -24,6 +26,9 @@
 <form method="POST" action="verificar.php">
     <input type="text" placeholder="ci" name="ci">
     <input type="password" placeholder="clave" name="clave">
+    <input type="color" id="head" name="head"
+           value="#e66465">
+    <label for="head">Head</label>
     <button type="submit">Ingresar</button>
 </form>
     <?php
