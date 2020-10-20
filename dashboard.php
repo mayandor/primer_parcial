@@ -12,7 +12,7 @@
         <div class="main">
             <h2>Bienvenido al SEA</h2>
             <p>Ver aprobados por departamento</p>
-            <a href="functions/generar_consulta.php">Generar</a>
+            <a href="functions/generar_consulta.php" class="boton">Generar</a>
         </div>
     </div>
 <?php

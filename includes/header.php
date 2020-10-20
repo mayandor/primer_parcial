@@ -10,7 +10,6 @@
 <body>
     <div class="topnavbar">
         <a href="functions/salir.php">Salir</a>
-        <a class="active" href="#home">Perfil</a>
         <span><b>User:</b><?php echo $_SESSION['usuario'] ?></span>
         <img src="./img/avatar.jpg" alt="alt" width="50">
     </div>

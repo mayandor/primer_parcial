@@ -26,6 +26,15 @@
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
+.boton{
+    background-color: #f44336;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
