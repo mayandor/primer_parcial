@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="header">
-        <a href="login.php">Iniciar sesion</a>
-    </div>
+    <?php
+        header("location: login.php");
+    ?>
 </body>
 </html>

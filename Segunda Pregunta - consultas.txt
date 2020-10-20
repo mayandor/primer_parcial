@@ -1,0 +1,21 @@
+-- Adicione una tabla de notas por materia y cuente la cantidad de aprobados por 
+departamento de manera que solo obtenga una sola fila de resultados con SQL 
+(Dos posibles formas, una mediante el conteo y otra mediante función de la BD o SGBD)
+SELECT
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '01') LPZ,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '02') CHQ,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '03') CBBA,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '04') ORU,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '05') PTS,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '05') TJ,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '05') SC,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '05') BE,
+(SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '05') PD
+
+
+-- FUNCIONES
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` FUNCTION `contar`(res varchar(20)) RETURNS bigint(20)
+RETURN (SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= res)$$
+DELIMITER ;
