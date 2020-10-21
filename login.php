@@ -10,15 +10,16 @@
     <?php
         include('includes/conexion.inc.php');
         session_start();
-        if(isset($_GET['id'])){
-            echo $_GET['id'];
+        if(isset($_GET['mesagge'])){
         ?>
         <div class="login-page">
             <form method="POST" action="functions/verificar.php">
                 <div class="imgcontainer">
                     <img class="avatar" src="img/avatar.jpg" alt="alt">
                 </div>
+
                 <div class="container">
+                    <p style="color:red; text-align:center">Usuario y/o contraseña incorrecto</p>
                     <label for="ci"><b>Cedula de Indentidad</b></label>
                     <input type="text" placeholder="12345" name="ci">
 
@@ -26,7 +27,11 @@
                     <input type="password" placeholder="*****" name="clave">
 
                     <label for="ci"><b>Color </b></label>
-                    <input type="color" name="color" value="#e66465">
+                    <input type="color" name="color" value="#06075B">
+                    <p>
+                    <label for="foto"><b>Foto Sesion</b></label>
+                    <input name="foto" type="file">
+                    </p>
                     <button type="submit">Ingresar</button>
                 </div>
             </form>
@@ -47,7 +52,7 @@
                     <input type="password" placeholder="*****" name="clave">
 
                     <label for="ci"><b>Color </b></label>
-                    <input type="color" name="color" value="#e66465">
+                    <input type="color" name="color" value="#06075B">
                     <p>
                     <label for="foto"><b>Foto Sesion</b></label>
                     <input name="foto" type="file">

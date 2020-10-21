@@ -1,6 +1,8 @@
 -- Adicione una tabla de notas por materia y cuente la cantidad de aprobados por 
 departamento de manera que solo obtenga una sola fila de resultados con SQL 
 (Dos posibles formas, una mediante el conteo y otra mediante función de la BD o SGBD)
+
+--CONSULTA
 SELECT
 (SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '01') LPZ,
 (SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= '02') CHQ,
@@ -19,3 +21,16 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` FUNCTION `contar`(res varchar(20)) RETURNS bigint(20)
 RETURN (SELECT COUNT(i.residencia) FROM identificador i, notas n WHERE i.ci = n.ci AND n.nota > 50 AND i.residencia= res)$$
 DELIMITER ;
+
+-- ASIGNAMOS A VARIABLES
+SET @LPZ = contar('01');
+SET @CHQ = contar('02');
+SET @CBBA = contar('03');
+SET @ORU = contar('04');
+SET @PTS = contar('05');
+SET @TJ = contar('06');
+SET @SC = contar('07');
+SET @BE = contar('08');
+SET @PD = contar('09');
+
+SELECT @LPZ, @CHQ, @CBBA, @ORU, @PTS, @TJ, @SC, @BE, @PD

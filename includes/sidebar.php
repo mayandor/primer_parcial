@@ -8,5 +8,6 @@
 </head>
 <body>
     <div class="sidenav" style="background-color:<?php echo $_SESSION['color']; ?>">
-        <a href="#"><img src="<?php echo 'img/'.$_SESSION['imagen_perfil']; ?>" alt="" width="60"></a>
+        <a>SEA</a>
+        <a href="#"><img src="./img/birrete.png" alt="" width="60"></a>
     </div>

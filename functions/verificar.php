@@ -11,6 +11,6 @@ if ($fila = mysqli_fetch_row($resultado)){
     $_SESSION['imagen_perfil'] =  $_POST['foto'];
     header("location: ../dashboard.php");
 }else{
-    header("location: ../login.php?id='NO'");
+    header("location: ../login.php?mesagge='NO'");
 }
 ?>

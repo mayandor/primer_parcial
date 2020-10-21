@@ -35,3 +35,8 @@ a:link, a:visited {
     margin-top: 8%;
     margin-left: 45%;
   }
+  .main {
+    margin-left: 160px; 
+    font-size: 28px; 
+    padding: 0px 10px;
+}
